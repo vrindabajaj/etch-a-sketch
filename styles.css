@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+}
+
+.sketch-container {
+    background-color: papayawhip;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+}
+
+.square {
+    width: 18px;
+    height: 18px;
+    border: 1px solid saddlebrown;
+}
