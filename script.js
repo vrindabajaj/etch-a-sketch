@@ -1,4 +1,4 @@
-const container = document.querySelector(".sketch-container");
+const grid = document.querySelector(".grid");
 const square = document.createElement("div");
 
 
@@ -7,7 +7,7 @@ function createGrid(size){
         for (let j = 0; j < size; j++){
             const square = document.createElement("div");
             square.classList.toggle("square");
-            container.appendChild(square);
+            grid.appendChild(square);
         }
     }
 }
