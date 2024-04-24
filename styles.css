@@ -9,7 +9,7 @@
 
 .grid {
     box-sizing: content-box;
-    border: 3px solid;
+    border: 2px solid;
     width: 800px;
     height: 800px;
     display: flex;
