@@ -34,3 +34,17 @@ body {
     border: 1px solid rgb(137, 140, 144);
     background-color: oldlace;
 }
+
+button {
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: oldlace;
+}
+
+button:hover{
+    background-color: palevioletred;
+}
