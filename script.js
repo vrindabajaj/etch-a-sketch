@@ -1,5 +1,9 @@
 const grid = document.querySelector(".grid");
 const clearButton = document.querySelector(".clear-grid");
+const changeButton = document.querySelector(".change-grid");
+let gridSize = 16;
+let newGridSize;
+
 
 function calculateSquareSize(size){
     const square = document.createElement("div");
@@ -17,6 +21,12 @@ function createGrid(size){
     }
 }
 
+function reset(){
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild);
+      }
+}
+
 grid.addEventListener("mouseover", function(e) {
     if (e.target.matches('.square')){
         e.target.style["background-color"] = "#" + `${ Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -24,10 +34,17 @@ grid.addEventListener("mouseover", function(e) {
 });
 
 clearButton.addEventListener("click", () =>{
-    while (grid.firstChild) {
-        grid.removeChild(grid.lastChild);
-      }
-    createGrid(16);
-})
+    reset();
+    createGrid(gridSize);
+});
 
-createGrid(16);
+changeButton.addEventListener("click", () =>{
+    newGridSize = prompt("What size grid would you like? Max - 50", "16");
+    if (newGridSize < 51){
+        gridSize = newGridSize;
+        reset();
+        createGrid(gridSize);
+    }
+});
+
+createGrid(gridSize);
