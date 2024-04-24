@@ -1,5 +1,4 @@
 const grid = document.querySelector(".grid");
-const squares = document.querySelector(".square");
 
 function calculateSquareSize(size){
     const square = document.createElement("div");
@@ -19,7 +18,7 @@ function createGrid(size){
 
 grid.addEventListener("mouseover", function(e) {
     if (e.target.matches('.square')){
-        e.target.style["background-color"] = "peru";
+        e.target.style["background-color"] = "#" + `${ Math.floor(Math.random() * 16777215).toString(16)}`;
     }
 });
 
